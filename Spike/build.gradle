@@ -24,8 +24,8 @@ android {
 
 sourceSets {
     testLocal {
-        java.srcDir file('src/test/java')
-        resources.srcDir file('src/test/resources')
+        java.srcDir file('src/instrumentTest/java')
+        resources.srcDir file('src/instrumentTest/resources')
     }
 }
 
@@ -33,7 +33,7 @@ dependencies {
 	compile 'com.android.support:appcompat-v7:18.0.0'
 
     testLocalCompile 'junit:junit:3.11'
-    testLocalCompile 'org.robolectric:robolectric:2.2'
+    testLocalCompile files('lib/robolectric-2.2-jar-with-dependencies.jar')
     testLocalCompile 'com.google.android:android:4.2.2'
     testLocalCompile 'com.google.android:support-v4:r6'
 
